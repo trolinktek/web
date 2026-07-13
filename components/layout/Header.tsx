@@ -41,8 +41,10 @@ function Dropdown({ label, items, href }: { label: string; items: NavItem[]; hre
 export function Header() {
   return <header className="sticky top-0 z-50 h-[76px] border-b border-white/10 bg-[#080909]/85 shadow-xl backdrop-blur-2xl">
     <div className="container-page flex h-full items-center justify-between gap-5">
-      <a href="/" className="flex shrink-0 items-center"><Image src="/images/logo/trolinktek-logo-light.svg" alt="TrolinkTek home" width={158} height={38} priority /></a>
-      <nav className="hidden h-full flex-1 items-center justify-center gap-5 text-[13px] xl:flex" aria-label="Main navigation">
+      <a href="/" className="flex shrink-0 items-center rounded-lg bg-white px-3 py-2 shadow-sm" aria-label="TrolinkTek home">
+        <Image src="/images/logo/trolinktek-original.png" alt="TrolinkTek" width={205} height={24} priority className="h-auto w-[180px] sm:w-[205px]" />
+      </a>
+      <nav className="hidden h-full flex-1 items-center justify-center gap-3 text-xs min-[900px]:flex min-[1100px]:gap-5 min-[1100px]:text-[13px]" aria-label="Main navigation">
         <a className="font-semibold text-white" href="/">Home</a>
         <Dropdown label="Products" items={productLinks} href="/products" />
         <Dropdown label="Solutions" items={solutionLinks} href="/#solutions" />
@@ -52,8 +54,7 @@ export function Header() {
         <a className="font-semibold text-white" href="/about">About</a>
         <a className="font-semibold text-white" href="/contact">Contact</a>
       </nav>
-      <div className="flex shrink-0 items-center gap-2"><a className="hidden rounded-lg bg-[#F5C400] px-5 py-3 text-sm font-bold text-[#080808] md:block" href="/inquiry">Get Wholesale Quote</a><MobileMenu /></div>
+      <div className="flex shrink-0 items-center gap-2"><a className="hidden rounded-lg bg-[#F5C400] px-5 py-3 text-sm font-bold text-[#080808] min-[1200px]:block" href="/inquiry">Get Wholesale Quote</a><MobileMenu /></div>
     </div>
   </header>;
 }
-

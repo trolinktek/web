@@ -13,7 +13,7 @@ export function MobileMenu() {
   const [open, setOpen] = useState(false);
   const [expanded, setExpanded] = useState('');
   return <>
-    <button className="focus-ring rounded-lg p-2 text-white xl:hidden" aria-label="Open navigation" onClick={() => setOpen(true)}><Menu /></button>
+    <button className="focus-ring rounded-lg p-2 text-white min-[900px]:hidden" aria-label="Open navigation" onClick={() => setOpen(true)}><Menu /></button>
     {open ? <div className="fixed inset-0 z-[100] bg-black/60" onClick={() => setOpen(false)}>
       <aside className="ml-auto h-full w-[88%] max-w-sm overflow-y-auto bg-white p-6 shadow-2xl" onClick={(event) => event.stopPropagation()}>
         <div className="mb-6 flex items-center justify-between"><b className="text-xl text-ink">TrolinkTek</b><button className="rounded-lg p-2" onClick={() => setOpen(false)} aria-label="Close menu"><X /></button></div>
@@ -31,4 +31,3 @@ export function MobileMenu() {
     </div> : null}
   </>;
 }
-
