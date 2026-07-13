@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Footer } from '@/components/layout/Footer';
 import { Header } from '@/components/layout/Header';
 import { TopBar } from '@/components/layout/TopBar';
+import { HeroCarousel } from '@/components/home/HeroCarousel';
 
 export const metadata: Metadata = {
   title: 'Wireless CarPlay Adapter Manufacturer & OEM/ODM | TrolinkTek',
@@ -67,18 +68,8 @@ export default function HomePage() {
     <TopBar />
     <Header />
     <main className="bg-[#070808] text-white">
-      {/* Hero: primary positioning, visual identity and first conversion actions. */}
-      <section className="relative isolate min-h-[620px] overflow-hidden" id="top">
-        <Image src="/images/home/hero-carplay.png" alt="Wireless in-car connectivity product shown inside a modern vehicle" fill priority className="-z-20 object-cover object-[64%_center]" sizes="100vw" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/80 to-transparent" />
-        <div className="container-page flex min-h-[620px] items-center py-20">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl font-bold leading-[1.02] tracking-[-.045em] sm:text-6xl lg:text-[68px]">Wireless CarPlay.<br />Built for your market.</h1>
-            <p className="mt-7 max-w-xl text-lg leading-8 text-slate-300">Factory-direct CarPlay and Android Auto product solutions for distributors, brands and global sales channels.</p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Link className="inline-flex min-h-12 items-center justify-center gap-2 bg-[#F5C400] px-6 font-bold text-[#080909]" href="/products">Explore Products<ArrowRight size={18} /></Link><Link className="inline-flex min-h-12 items-center justify-center border border-[#F5C400] px-6 font-bold text-[#F5C400]" href="/inquiry">Start Your Project</Link></div>
-          </div>
-        </div>
-      </section>
+      {/* Hero: pure-image carousel with three product banners. */}
+      <HeroCarousel />
 
       {/* Capability strip: quickly communicates core B2B cooperation strengths. */}
       <section className="border-y border-white/10 bg-gradient-to-r from-[#0B0C0C] via-[#171818] to-[#0B0C0C]" aria-label="TrolinkTek capabilities">
